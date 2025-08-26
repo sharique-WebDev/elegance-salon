@@ -20,11 +20,11 @@
 <body>
   <!-- floating icons -->
   <div class="floating-icons">
-    <a href="tel:+918226912421">
+    <a href="tel:+919525549596">
       <img src="./assets/icons/phone.png" alt="phone" class="phone-icon animate-icons">
 
     </a>
-    <a href="https://wa.me/" target="_blank">
+    <a href="https://wa.me/+919525549596" target="_blank" rel="noopener no-referrer">
       <img src="./assets/icons/whatsapp.png" alt="whatsapp" class="whatsapp-icon animate-icons">
 
     </a>
@@ -35,28 +35,28 @@
   </div>
 
   <!-- header -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-pill">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/logo.png" alt="">
+      <a class="navbar-brand ms-5" href="#">
+        <img src="./assets/logo.png" alt="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-          <li class="nav-item me-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item me-4" id="nav-item1">
+            <a class="nav-link " aria-current="page" href="#" onclick="navColor(this)">Home</a>
           </li>
-          <li class="nav-item me-3">
-            <a class="nav-link active" href="#about">About</a>
+          <li class="nav-item me-4" id="nav-item2">
+            <a class="nav-link" href="#about" onclick="navColor(this)">About</a>
           </li>
-          <li class="nav-item me-3">
-            <a class="nav-link active" href="#services">Services</a>
+          <li class="nav-item me-4" id="nav-item3">
+            <a class="nav-link" href="#services" onclick="navColor(this)">Services</a>
           </li>
-          <li class="nav-item me-3">
-            <a class="nav-link active" href="#gallery">Gallery</a>
+          <li class="nav-item me-4" id="nav-item4">
+            <a class="nav-link" href="#gallery" onclick="navColor(this)">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link book-appoint  px-3 py-1" href="#appointment">Book Appointment</a>
@@ -99,7 +99,7 @@
 
 
   <!-- About Section -->
-  <section id="about" class="about-section bg-light">
+  <section id="about" class="about-section">
     <div class="container p-5">
       <div class="row align-items-center">
 
@@ -137,7 +137,7 @@
     <div class="container">
       <!-- Heading -->
       <div class="text-center mb-5">
-        <h2 class="fw-bold">Our <span class="text-danger">Services</span></h2>
+        <h2 class="fw-bold">Our <span>Services</span></h2>
         <p class="">
           At <strong>Elegance Unisex Salon</strong>, we bring you a wide range of premium grooming and beauty
           services designed to enhance your style and confidence. From refreshing haircuts and soothing spa
@@ -181,11 +181,11 @@
 
 
   <!-- Gallery Section -->
-  <section id="gallery" class="gallery-section py-5 bg-light">
+  <section id="gallery" class="gallery-section py-5">
     <div class="container py-4">
       <!-- Heading -->
       <div class="text-center mb-5">
-        <h2 class="fw-bold">Our <span class="text-danger">Gallery</span></h2>
+        <h2 class="fw-bold">Our <span>Gallery</span></h2>
         <p class="">
           A glimpse of the stunning transformations and luxury experiences at
           <strong>Elegance Unisex Salon</strong>.
@@ -270,6 +270,21 @@
     </div>
   </section>
 
+  <!-- 3d desing -->
+  <section id="slider" class="container py-5">
+  <input type="radio" name="slider" id="s1">
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3" checked>
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
+  <label for="s1" id="slide1"></label>
+  <label for="s2" id="slide2"></label>
+  <label for="s3" id="slide3"></label>
+  <label for="s4" id="slide4"></label>
+  <label for="s5" id="slide5"></label>
+</section>
+
+
 
   <!-- Appointment Section -->
   <section id="appointment" class="appointment-section py-5">
@@ -330,56 +345,58 @@
     </div>
   </section>
 
-<footer class="bg-dark text-white pt-5 pb-4">
-  <div class="container text-md-left">
-    <div class="row text-md-left">
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
 
-      <!-- Salon Info -->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Elegance Salon</h5>
-        <p>Redefining style with premium haircuts, treatments, and spa services for men & women. Your beauty, our passion.</p>
+        <!-- Salon Info -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Elegance Salon</h5>
+          <p>Redefining style with premium haircuts, treatments, and spa services for men & women. Your beauty, our
+            passion.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+          <p><a href="#home" class="text-white" style="text-decoration: none;">Home</a></p>
+          <p><a href="#about" class="text-white" style="text-decoration: none;">About</a></p>
+          <p><a href="#services" class="text-white" style="text-decoration: none;">Services</a></p>
+          <p><a href="#gallery" class="text-white" style="text-decoration: none;">Gallery</a></p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+          <p><i class="fas fa-home mr-3"></i> Patna, Bihar, India</p>
+          <p><i class="fas fa-envelope mr-3"></i> info@elegancesalon.com</p>
+          <p><i class="fas fa-phone mr-3"></i> +91 98765 43210</p>
+          <p><i class="fas fa-clock mr-3"></i> Mon-Sun: 10am - 8pm</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
+          <div class="d-flex flex-column gap-3">
+
+            <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
+            <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-instagram fa-lg"></i>
+              Instagram</a>
+            <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i> Whatsapp</a>
+            <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-youtube fa-lg"></i> Youtube</a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Quick Links -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
-        <p><a href="#home" class="text-white" style="text-decoration: none;">Home</a></p>
-        <p><a href="#about" class="text-white" style="text-decoration: none;">About</a></p>
-        <p><a href="#services" class="text-white" style="text-decoration: none;">Services</a></p>
-        <p><a href="#gallery" class="text-white" style="text-decoration: none;">Gallery</a></p>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
-        <p><i class="fas fa-home mr-3"></i> Patna, Bihar, India</p>
-        <p><i class="fas fa-envelope mr-3"></i> info@elegancesalon.com</p>
-        <p><i class="fas fa-phone mr-3"></i> +91 98765 43210</p>
-        <p><i class="fas fa-clock mr-3"></i> Mon–Sun: 10am – 8pm</p>
-      </div>
-
-      <!-- Social Media -->
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
-        <div class="d-flex flex-column gap-3">
-
-          <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-facebook fa-lg"></i> Facebook</a>
-          <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
-          <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i> Whatsapp</a>
-          <a href="#" class="text-white me-4 text-decoration-none"><i class="fab fa-youtube fa-lg"></i> Youtube</a>
+      <!-- Copyright -->
+      <div class="row mt-4">
+        <div class="col-md-12 text-center">
+          <p class="text-white">© 2025 Elegance Unisex Salon. All Rights Reserved | Demo design by <a href="https://macrodigi.com/" rel="no-referrer noopener" target="_blank" class="text-decoration-none">Macrodigi</a></p>
         </div>
       </div>
-
     </div>
-
-    <!-- Copyright -->
-    <div class="row mt-4">
-      <div class="col-md-12 text-center">
-        <p class="text-white">© 2025 Elegance Unisex Salon. All Rights Reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -1,37 +1,49 @@
-const navbar = document.querySelector('.navbar');
-document.querySelector('.hero').style.minHeight = 
-    `calc(100vh - ${navbar.offsetHeight}px)`;
+// const navbar = document.querySelector('.navbar');
+// document.querySelector('.hero').style.minHeight =
+//     `calc(100vh - ${navbar.offsetHeight}px)`;
 
-    document.body.style.paddingTop = document.querySelector('.navbar').offsetHeight + 'px';
+// document.body.style.paddingTop = document.querySelector('.navbar').offsetHeight + 'px';
 
-    document.addEventListener("DOMContentLoaded", ()=>{
-        const counters = document.querySelectorAll('.counter');
+function navColor(element) {
+  // Reset all nav-link colors
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.style.color = "";
+    link.style.borderBottom = "";
+  });
 
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const current = +counter.innerText.replace(/,/g, '');
-                const increment = Math.ceil(target/150);
+  // Highlight the clicked one
+  element.style.color = "#EA1068";
+  element.style.borderBottom = "1.5px solid #EA1068"
+}
 
-                if(current < target) {
-                    counter.innerText = (current + increment).toLocaleString();
-                    setTimeout(updateCount, 20);
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter');
 
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const current = +counter.innerText.replace(/,/g, '');
+            const increment = Math.ceil(target / 150);
+
+            if (current < target) {
+                counter.innerText = (current + increment).toLocaleString();
+                setTimeout(updateCount, 20);
+
+            } else {
+                counter.innerText = target.toLocaleString();
             }
+        }
 
-            updateCount();
-        })
+        updateCount();
     })
+})
 
-    AOS.init();
+AOS.init();
 
-    let gotoEl = document.querySelector(".arrow-icon")
+let gotoEl = document.querySelector(".arrow-icon")
 
-window.addEventListener("scroll", () =>{
-    if(window.scrollY > 500){
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
         gotoEl.style.opacity = "1"
         gotoEl.style.visibility = "visible"
     } else {
@@ -39,3 +51,5 @@ window.addEventListener("scroll", () =>{
         gotoEl.style.visibility = "hidden"
     }
 })
+
+
