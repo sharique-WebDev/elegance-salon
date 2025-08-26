@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-pink: #f92b4d;
+    --primary-black: #1C1C1C;
+    --secondary-black: #0A0A0A;
+    --primary-white: #F5F5DC;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* Base styles */
+.floating-icons img {
+  position: fixed;
+  width: 45px;
+  z-index: 999;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Positioning */
+.floating-icons .whatsapp-icon {
+  left: 30px;
+  bottom: 30px;
+}
+
+.floating-icons .phone-icon {
+  left: 30px;
+  bottom: 100px;
+}
+
+.floating-icons .arrow-icon {
+  right: 30px;
+  bottom: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Hover Effects */
+.floating-icons img:not(.arrow-icon) {
+  animation: pulseGlow 1s infinite;
+  transform: translateY(-5px) scale(1.05);
+  filter: drop-shadow(0 0 10px #00ffcc);
+}
+
+/* Keyframes for glowing pulse */
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 5px #00ffcc);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #00ffcc);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #00ffcc);
+  }
+}
+
+
+.navbar-brand img {
+    width: 200px;
+}
+
+.book-appoint {
+    background-color: var(--primary-pink);
+    color: white;
+    transition: 0.3s ease;
+}
+
+.book-appoint:hover {
+    background-color: var(--primary-black);
+    color: white;
+}
+
+.navbar-collapse .navbar-nav li {
+    font-size: 18px;
+}
+
+.hero {
+    background: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)),
+        url('./assets/hero-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-img {
+    box-shadow: 0 0 15px rgb(255, 215, 215);
+    transition: 0.3s ease;
+}
+
+.hero-img:hover {
+    box-shadow: 0 0 30px rgb(255, 215, 215);
+}
+
+.hero-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: var(--primary-pink);
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+    transition: 0.2s ease;
+}
+
+.scroll-down:hover {
+    color: var(--primary-white);
+}
+
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    40% {
+        transform: translate(-50%, -10px);
+    }
+
+    60% {
+        transform: translate(-50%, -5px);
+    }
+}
+
+.about-section {
+    background: #FFFFFF !important;
+    padding: 60px;
+}
+
+.about-section .container {
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 50px 30px;
+    background: #FFFFFF;
+}
+
+
+.about-section .container::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: url('./assets/scissors.gif') no-repeat center;
+    background-size: contain;
+}
+
+
+.about-images {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.about-images .about-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s ease;
+}
+
+/* Initially overlapped */
+.about-images .img1 {
+    z-index: 2;
+}
+
+.about-images .img2 {
+    z-index: 1;
+}
+
+/* On hover - move apart */
+.about-images:hover .img1 {
+    transform: translate(-30%, -20%);
+}
+
+.about-images:hover .img2 {
+    transform: translate(30%, 20%);
+}
+
+.about-right h2 span {
+    color: var(--primary-pink);
+}
+
+.about-right a {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    transition: 0.3s ease;
+}
+
+.about-right a:hover {
+    background-color: var(--primary-pink);
+    color: var(--primary-white);
+}
+
+.services-section {
+    color: #fff !important;
+    background: linear-gradient(rgba(28, 28, 28, 0.7), rgba(28, 28, 28, 0.7)),
+        url('./assets/services-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    padding: 60px 0;
+}
+
+.services-section h2 span {
+    color: var(--primary-pink);
+}
+
+.services-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+.services-section .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 5px solid var(--primary-pink);
+}
+
+.gallery-img {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}
+
+.stats-section {
+    background: var(--primary-pink);
+}
+
+.stats-section h2,
+.stats-section .plus {
+    display: inline-block;
+    color: #FFFFFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.stats-section p {
+    font-size: 1.1rem;
+    color: var(--primary-white);
+}
+
+.appointment-section {
+    background: linear-gradient(rgba(28, 28, 28, 0.7), rgba(28, 28, 28, 0.7)),
+        url('./assets/appointment-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.appointment-title span{
+    color: var(--primary-pink);
+}
+
+.appointment-form {
+    background: #fff;
+    color: #000;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+    border-radius: 8px;
+}
+
+.resize-none{
+    resize: none;
+}
+
+.appointment-btn {
+    background-color: var(--primary-pink);
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.appointment-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-pink);
+    color: #fff;
+}
+
+footer a:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}
+
+footer i {
+  transition: transform 0.3s ease;
+}
+
+footer i:hover {
+  transform: scale(1.2);
+}
