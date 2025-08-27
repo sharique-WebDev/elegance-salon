@@ -37,21 +37,21 @@ body {
     bottom: 100px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .floating-icons .whatsapp-icon {
-    left: 20px;
-    bottom: 20px;
-}
+        left: 20px;
+        bottom: 20px;
+    }
 
-.floating-icons .phone-icon {
-    left: 20px;
-    bottom: 80px;
-}
+    .floating-icons .phone-icon {
+        left: 20px;
+        bottom: 80px;
+    }
 
-.floating-icons .arrow-icon {
-    right: 20px;
-    bottom: 20px;
-}
+    .floating-icons .arrow-icon {
+        right: 20px;
+        bottom: 20px;
+    }
 }
 
 .floating-icons .arrow-icon {
@@ -247,6 +247,10 @@ body {
 
     .about-images:hover .img1 {
         transform: translate(-10%, -10%);
+    }
+
+    .about-section .container::after {
+        background: none;
     }
 }
 
@@ -484,60 +488,62 @@ body {
 
 /* Mobile Screens */
 @media (max-width: 768px) {
-  #slider {
-    height: 60vw;   /* Increase height relative to width */
-  }
+    #slider {
+        height: 60vw;
+        /* Increase height relative to width */
+    }
 
-  #slider label {
-    width: 75%;     /* Wider slides for mobile */
-  }
+    #slider label {
+        width: 75%;
+        /* Wider slides for mobile */
+    }
 
-  /* Adjust 3D spacing for small screens */
-  #s1:checked ~ #slide4,
-  #s2:checked ~ #slide5,
-  #s3:checked ~ #slide1,
-  #s4:checked ~ #slide2,
-  #s5:checked ~ #slide3 {
-    transform: translate3d(-20%, 0, -120px);
-  }
+    /* Adjust 3D spacing for small screens */
+    #s1:checked~#slide4,
+    #s2:checked~#slide5,
+    #s3:checked~#slide1,
+    #s4:checked~#slide2,
+    #s5:checked~#slide3 {
+        transform: translate3d(-20%, 0, -120px);
+    }
 
-  #s1:checked ~ #slide5,
-  #s2:checked ~ #slide1,
-  #s3:checked ~ #slide2,
-  #s4:checked ~ #slide3,
-  #s5:checked ~ #slide4 {
-    transform: translate3d(-10%, 0, -60px);
-  }
+    #s1:checked~#slide5,
+    #s2:checked~#slide1,
+    #s3:checked~#slide2,
+    #s4:checked~#slide3,
+    #s5:checked~#slide4 {
+        transform: translate3d(-10%, 0, -60px);
+    }
 
-  #s1:checked ~ #slide2,
-  #s2:checked ~ #slide3,
-  #s3:checked ~ #slide4,
-  #s4:checked ~ #slide5,
-  #s5:checked ~ #slide1 {
-    transform: translate3d(10%, 0, -60px);
-  }
+    #s1:checked~#slide2,
+    #s2:checked~#slide3,
+    #s3:checked~#slide4,
+    #s4:checked~#slide5,
+    #s5:checked~#slide1 {
+        transform: translate3d(10%, 0, -60px);
+    }
 
-  #s1:checked ~ #slide3,
-  #s2:checked ~ #slide4,
-  #s3:checked ~ #slide5,
-  #s4:checked ~ #slide1,
-  #s5:checked ~ #slide2 {
-    transform: translate3d(20%, 0, -120px);
-  }
+    #s1:checked~#slide3,
+    #s2:checked~#slide4,
+    #s3:checked~#slide5,
+    #s4:checked~#slide1,
+    #s5:checked~#slide2 {
+        transform: translate3d(20%, 0, -120px);
+    }
 
-  /* Arrows smaller & closer on mobile */
-  .arrow {
-    font-size: 1.8rem;
-    padding: 8px 12px;
-  }
+    /* Arrows smaller & closer on mobile */
+    .arrow {
+        font-size: 1.8rem;
+        padding: 8px 12px;
+    }
 
-  .prev {
-    left: 10px;
-  }
+    .prev {
+        left: 10px;
+    }
 
-  .next {
-    right: 10px;
-  }
+    .next {
+        right: 10px;
+    }
 }
 
 .appointment-section {
