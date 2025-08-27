@@ -1,9 +1,3 @@
-// const navbar = document.querySelector('.navbar');
-// document.querySelector('.hero').style.minHeight =
-//     `calc(100vh - ${navbar.offsetHeight}px)`;
-
-// document.body.style.paddingTop = document.querySelector('.navbar').offsetHeight + 'px';
-
 function navColor(element) {
   // Reset all nav-link colors
   document.querySelectorAll(".nav-link").forEach(link => {
@@ -43,7 +37,7 @@ AOS.init();
 let gotoEl = document.querySelector(".arrow-icon")
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 600) {
         gotoEl.style.opacity = "1"
         gotoEl.style.visibility = "visible"
     } else {
@@ -53,3 +47,20 @@ window.addEventListener("scroll", () => {
 })
 
 
+let currentSlide = 3; // s3 is default checked
+
+function showSlide(n) {
+  const totalSlides = 5;
+  if (n > totalSlides) n = 1;
+  if (n < 1) n = totalSlides;
+  document.getElementById("s" + n).checked = true;
+  currentSlide = n;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}

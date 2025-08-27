@@ -29,7 +29,7 @@
 
     </a>
     <a href="#">
-      <img src="./assets/icons/up-arrow.png" alt="up-arrow" class="arrow-icon">
+      <img src="./assets/icons/up-arrow.svg" alt="up-arrow" class="arrow-icon">
 
     </a>
   </div>
@@ -134,48 +134,75 @@
 
   <!-- Services Section -->
   <section id="services" class="services-section bg-light">
-    <div class="container">
-      <!-- Heading -->
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Our <span>Services</span></h2>
-        <p class="">
-          At <strong>Elegance Unisex Salon</strong>, we bring you a wide range of premium grooming and beauty
-          services designed to enhance your style and confidence. From refreshing haircuts and soothing spa
-          therapies to glamorous bridal makeovers, our experts ensure you look and feel your absolute best.
-        </p>
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our <span>Services</span></h2>
+      <p>
+        At <strong>Elegance Unisex Salon</strong>, we bring you a wide range of premium grooming and beauty
+        services designed to enhance your style and confidence. From refreshing haircuts and soothing spa
+        therapies to glamorous bridal makeovers, our experts ensure you look and feel your absolute best.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card h-100 text-center shadow-sm border-0 p-4">
+          <img src="./assets/icons/haircut.png" alt="Haircut" class="mx-auto mb-3" width="60">
+          <h5 class="fw-bold">Haircut & Styling</h5>
+          <p class="text-muted">Trendy haircuts and professional styling tailored to suit your personality.</p>
+        </div>
       </div>
 
-
-      <div class="row g-4">
-        <!-- Service 1 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
-          <div class="card h-100 text-center shadow-sm border-0 p-4">
-            <img src="./assets/icons/haircut.png" alt="Haircut" class="mx-auto mb-3" width="60">
-            <h5 class="fw-bold">Haircut & Styling</h5>
-            <p class="text-muted">Trendy haircuts and professional styling tailored to suit your personality.</p>
-          </div>
+      <!-- Service 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card h-100 text-center shadow-sm border-0 p-4">
+          <img src="./assets/icons/spa.png" alt="Spa" class="mx-auto mb-3" width="60">
+          <h5 class="fw-bold">Spa & Relaxation</h5>
+          <p class="text-muted">Rejuvenating spa treatments to refresh your body and mind.</p>
         </div>
+      </div>
 
-        <!-- Service 2 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
-          <div class="card h-100 text-center shadow-sm border-0 p-4">
-            <img src="./assets/icons/spa.png" alt="Spa" class="mx-auto mb-3" width="60">
-            <h5 class="fw-bold">Spa & Relaxation</h5>
-            <p class="text-muted">Rejuvenating spa treatments to refresh your body and mind.</p>
-          </div>
+      <!-- Service 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card h-100 text-center shadow-sm border-0 p-4">
+          <img src="./assets/icons/makeup.png" alt="Makeup" class="mx-auto mb-3" width="60">
+          <h5 class="fw-bold">Bridal & Makeup</h5>
+          <p class="text-muted">Glamorous bridal looks and professional makeup for every occasion.</p>
         </div>
+      </div>
 
-        <!-- Service 3 -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
-          <div class="card h-100 text-center shadow-sm border-0 p-4">
-            <img src="./assets/icons/makeup.png" alt="Makeup" class="mx-auto mb-3" width="60">
-            <h5 class="fw-bold">Bridal & Makeup</h5>
-            <p class="text-muted">Glamorous bridal looks and professional makeup for every occasion.</p>
-          </div>
+      <!-- Service 4 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+        <div class="card h-100 text-center shadow-sm border-0 p-4">
+          <img src="./assets/icons/facial.png" alt="Facial" class="mx-auto mb-3" width="60">
+          <h5 class="fw-bold">Facials & Skincare</h5>
+          <p class="text-muted">Premium facials and treatments to give your skin a natural glow.</p>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+        <div class="card h-100 text-center shadow-sm border-0 p-4">
+          <img src="./assets/icons/nails.png" alt="Nails" class="mx-auto mb-3" width="60">
+          <h5 class="fw-bold">Nail Art & Care</h5>
+          <p class="text-muted">Stylish nail art, manicures, and pedicures to keep your nails healthy & chic.</p>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+        <div class="card h-100 text-center shadow-sm border-0 p-4">
+          <img src="./assets/icons/haircolor.png" alt="Hair Coloring" class="mx-auto mb-3" width="60">
+          <h5 class="fw-bold">Hair Coloring</h5>
+          <p class="text-muted">Trendy global hair colors, highlights, and balayage styles.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 
@@ -272,17 +299,22 @@
 
   <!-- 3d desing -->
   <section id="slider" class="container py-5">
-  <input type="radio" name="slider" id="s1">
-  <input type="radio" name="slider" id="s2">
-  <input type="radio" name="slider" id="s3" checked>
-  <input type="radio" name="slider" id="s4">
-  <input type="radio" name="slider" id="s5">
-  <label for="s1" id="slide1"></label>
-  <label for="s2" id="slide2"></label>
-  <label for="s3" id="slide3"></label>
-  <label for="s4" id="slide4"></label>
-  <label for="s5" id="slide5"></label>
-</section>
+    <input type="radio" name="slider" id="s1">
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3" checked>
+    <input type="radio" name="slider" id="s4">
+    <input type="radio" name="slider" id="s5">
+    <label for="s1" id="slide1"></label>
+    <label for="s2" id="slide2"></label>
+    <label for="s3" id="slide3"></label>
+    <label for="s4" id="slide4"></label>
+    <label for="s5" id="slide5"></label>
+
+
+     <!-- Arrows -->
+  <button class="arrow prev" onclick="prevSlide()">&#10094;</button>
+  <button class="arrow next" onclick="nextSlide()">&#10095;</button>
+  </section>
 
 
 
@@ -392,7 +424,9 @@
       <!-- Copyright -->
       <div class="row mt-4">
         <div class="col-md-12 text-center">
-          <p class="text-white">© 2025 Elegance Unisex Salon. All Rights Reserved | Demo design by <a href="https://macrodigi.com/" rel="no-referrer noopener" target="_blank" class="text-decoration-none">Macrodigi</a></p>
+          <p class="text-white">© 2025 Elegance Unisex Salon. All Rights Reserved | Demo design by <a
+              href="https://macrodigi.com/" rel="no-referrer noopener" target="_blank"
+              class="text-decoration-none">Macrodigi</a></p>
         </div>
       </div>
     </div>

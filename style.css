@@ -6,6 +6,7 @@
 
 :root {
     --primary-pink: #EA1068;
+    --secondary-pink: #ff008099;
     --primary-black: #1C1C1C;
     --secondary-black: #0A0A0A;
     --primary-white: #F5F5DC;
@@ -288,7 +289,7 @@ body {
 }
 
 .stats-section {
-    background: var(--primary-pink);
+    background: var(--secondary-pink);
 }
 
 .stats-section h2,
@@ -402,6 +403,34 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 0, 128, 0.6);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: rgba(255, 0, 128, 0.9);
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
 
 .appointment-section {
     background: linear-gradient(rgba(28, 28, 28, 0.7), rgba(28, 28, 28, 0.7)),
