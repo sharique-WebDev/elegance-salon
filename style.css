@@ -18,8 +18,6 @@ body {
 }
 
 
-
-
 /* Base styles */
 .floating-icons img {
     position: fixed;
@@ -37,6 +35,23 @@ body {
 .floating-icons .phone-icon {
     left: 30px;
     bottom: 100px;
+}
+
+@media (max-width: 768px){
+    .floating-icons .whatsapp-icon {
+    left: 20px;
+    bottom: 20px;
+}
+
+.floating-icons .phone-icon {
+    left: 20px;
+    bottom: 80px;
+}
+
+.floating-icons .arrow-icon {
+    right: 20px;
+    bottom: 20px;
+}
 }
 
 .floating-icons .arrow-icon {
@@ -74,28 +89,44 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.1) !important;
- 
     backdrop-filter: blur(10px) !important;
-
     z-index: 1000;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
 }
 
-.display-flex{
-    display: flex;
-    justify-content: space-around !important;
+/* Small Screens (Mobile) */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        /* Full width */
+        top: 0;
+        /* Stick to very top */
+        left: 0;
+        transform: none;
+        border-radius: 0;
+        background: #fff !important;
+        /* Solid background for readability */
+        backdrop-filter: none !important;
+        /* No blur on mobile */
+    }
+
+    .navbar-brand img {
+        width: 140px;
+        /* Smaller logo */
+    }
 }
 
 .navbar-brand img {
     width: 200px;
 }
 
-.nav-link{
+.nav-link {
     color: #c6c6c6;
     transition: all 0.2s ease-in-out;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: var(--primary-pink);
     border-bottom: 1.5px solid var(--primary-pink);
 }
@@ -198,6 +229,26 @@ body {
     background-size: contain;
 }
 
+@media (max-width: 768px) {
+    .about-section .container {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .about-section {
+        padding: 60px 40px;
+    }
+
+    .about-images {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-images:hover .img1 {
+        transform: translate(-10%, -10%);
+    }
+}
 
 .about-images {
     position: relative;
@@ -405,32 +456,89 @@ body {
 }
 
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 0, 128, 0.6);
-  border: none;
-  color: #fff;
-  font-size: 2.5rem;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 1000;
-  transition: background 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 0, 128, 0.6);
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: background 0.3s ease;
 }
 
 .arrow:hover {
-  background: rgba(255, 0, 128, 0.9);
+    background: rgba(255, 0, 128, 0.9);
 }
 
 .prev {
-  left: 30px;
+    left: 30px;
 }
 
 .next {
-  right: 30px;
+    right: 30px;
 }
 
+/* Mobile Screens */
+@media (max-width: 768px) {
+  #slider {
+    height: 60vw;   /* Increase height relative to width */
+  }
+
+  #slider label {
+    width: 75%;     /* Wider slides for mobile */
+  }
+
+  /* Adjust 3D spacing for small screens */
+  #s1:checked ~ #slide4,
+  #s2:checked ~ #slide5,
+  #s3:checked ~ #slide1,
+  #s4:checked ~ #slide2,
+  #s5:checked ~ #slide3 {
+    transform: translate3d(-20%, 0, -120px);
+  }
+
+  #s1:checked ~ #slide5,
+  #s2:checked ~ #slide1,
+  #s3:checked ~ #slide2,
+  #s4:checked ~ #slide3,
+  #s5:checked ~ #slide4 {
+    transform: translate3d(-10%, 0, -60px);
+  }
+
+  #s1:checked ~ #slide2,
+  #s2:checked ~ #slide3,
+  #s3:checked ~ #slide4,
+  #s4:checked ~ #slide5,
+  #s5:checked ~ #slide1 {
+    transform: translate3d(10%, 0, -60px);
+  }
+
+  #s1:checked ~ #slide3,
+  #s2:checked ~ #slide4,
+  #s3:checked ~ #slide5,
+  #s4:checked ~ #slide1,
+  #s5:checked ~ #slide2 {
+    transform: translate3d(20%, 0, -120px);
+  }
+
+  /* Arrows smaller & closer on mobile */
+  .arrow {
+    font-size: 1.8rem;
+    padding: 8px 12px;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+}
 
 .appointment-section {
     background: linear-gradient(rgba(28, 28, 28, 0.7), rgba(28, 28, 28, 0.7)),
